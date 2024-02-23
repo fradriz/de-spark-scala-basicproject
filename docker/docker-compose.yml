@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+  jupyterlab:
+    image: jupyterlab
+    container_name: jupyterlab
+    ports:
+      - 8888:8888
+    volumes:
+      - ../notebook:/opt/workspace
