@@ -6,7 +6,7 @@ import utils.spark.transforms.highestClosingPricesPerYear
 import utils.configs.getConfigs.getInputArguments
 import utils.Logging
 
-import de.fr.sparkscala.utils.spark.writers.writeParquet
+import utils.spark.writers.writeParquet
 import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
 
 import java.sql.Date
@@ -36,8 +36,9 @@ object Main extends Logging {
     import spark.implicits._
 
     // Read the data into a dataframe
-    log(s"Reading data from $inputParameters.path_to_file")
-    val df: DataFrame = getCSVFile(inputParameters.path_to_file, spark)
+    val path_to_file = inputParameters.path_to_file
+    log(s"Reading data from $path_to_file")
+    val df: DataFrame = getCSVFile(path_to_file, spark)
     df.show(2)
     df.printSchema()
 

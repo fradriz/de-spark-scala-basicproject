@@ -43,8 +43,10 @@ This will create a jar file: _..<project name>/target/scala-$SCALA_VERSION/spark
 ## Running the code
 From an environment with the same version of Spark and Scala run:
 ```shell
-spark-submit --master "local[*]" spark-scala212_2.12-0.1.0-SNAPSHOT.jar \
-      --path_to_file='path_to_csv_file' \
+$ PATH_TO_FILE="$HOME/IntelliJProjects/de-spark-scala-basicproject/test_data/AAPL.csv"
+
+$ spark-submit --master "local[*]" spark-scala212_2.12-0.1.0-SNAPSHOT.jar \
+      --path_to_file=$PATH_TO_FILE \
       --dest_path=path to save the results
 ```
 
