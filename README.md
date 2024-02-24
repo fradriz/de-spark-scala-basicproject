@@ -9,6 +9,7 @@ Keeping some good practices and incorporating some of them for this new (for me)
 * Scala version: 2.12.18
     * scalatest 3.2.17
 * Notebook: Zeppelin
+* Test data:
 
 ### Setting up IntelliJ
 New > Project

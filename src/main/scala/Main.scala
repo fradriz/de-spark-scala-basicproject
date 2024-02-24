@@ -65,7 +65,7 @@ object Main extends Logging {
     //df_windowed.explain(extended = true)
 
     //Loading to parquet
-    writeParquet(df_windowed.limit(5), dest=inputParameters.dest_path)
+    writeParquet(df_windowed.limit(5), dest=inputParameters.dest_path + "/window_dataframe")
 
     println("-- Spark process finished --")
     spark.stop()
