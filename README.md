@@ -50,4 +50,13 @@ $ spark-submit --master "local[*]" spark-scala212_2.12-0.1.0-SNAPSHOT.jar \
       --dest_path=path to save the results
 ```
 
+## Pending
+* Add docstrings 
+* More testing coverage
+* Add parameters to run different types of actions: extract, transformation 1, transformation 2, save/write, quality check.
 
+## Keep reading
+* [Write Clean and SOLID Scala Spark Jobs](https://towardsdatascience.com/write-clean-and-solid-scala-spark-jobs-28ac4395424a)
+* [10 tips of writing a spark job in Scala](https://cm.engineering/10-tips-in-writing-a-spark-job-in-scala-cc837149a173)
+* [Building a scala project with Intellij and SBT](https://docs.scala-lang.org/getting-started/intellij-track/building-a-scala-project-with-intellij-and-sbt.html)
+* GitHub [spark-scala-examples](https://github.com/spark-examples/spark-scala-examples)
