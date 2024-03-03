@@ -26,6 +26,11 @@ case class State(state: String, stateName: String)
 
 object Main extends Logging {
 
+  def flatProduct(t: Product): Iterator[Any] = t.productIterator.flatMap {
+    case p: Product => flatProduct(p)
+    case x => Iterator(x)
+  }
+
   def main(args: Array[String]): Unit = {
     // Reading input arguments
     log("Reading input arguments in Main")
@@ -33,6 +38,10 @@ object Main extends Logging {
 
     // Getting the sparkSession
     val spark: SparkSession = setSpark(sessionName="Spark Scala - Basic Project")
+    log("Spark session parameters:")
+    val arr = spark.sparkContext.getConf.getAll
+    for (tup <- arr) println(flatProduct(tup).mkString(" = "))
+
     import spark.implicits._
 
     // Read the data into a dataframe

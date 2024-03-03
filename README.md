@@ -51,9 +51,11 @@ $ spark-submit --master "local[*]" spark-scala212_2.12-0.1.0-SNAPSHOT.jar \
 ```
 
 ## Pending
-* Add docstrings 
-* More testing coverage
-* Add parameters to run different types of actions: extract, transformation 1, transformation 2, save/write, quality check.
+- [ ] Add docstrings 
+- [ ] More testing coverage
+- [ ] SQL quality check ()
+- [ ] Add parameters to run different types of actions: extract, transformation 1, transformation 2, save/write, quality check.
+
 
 ## Keep reading
 * [Write Clean and SOLID Scala Spark Jobs](https://towardsdatascience.com/write-clean-and-solid-scala-spark-jobs-28ac4395424a)

@@ -13,7 +13,7 @@ class uTests extends AnyFunSuite {
   private val spark = SparkSession
     .builder()
     .appName("SparkSession Test")
-    .master("local[*]")
+    //.master("local[*]")
     .getOrCreate()
 
   private val testSchema = StructType(Seq(

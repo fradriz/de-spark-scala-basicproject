@@ -8,8 +8,9 @@ object settings {
   def setSpark(sessionName: String): SparkSession = {
     val spark = SparkSession.builder()
       .appName(name=sessionName)
-      .master("local[*]")
       .getOrCreate()
+
+    //.master("local[*]")
 
     spark.sparkContext.setLogLevel("ERROR")
     spark
