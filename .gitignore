@@ -18,7 +18,7 @@ Thumbs.db
 target
 .bsp
 spark_ui_events
-project
+project/target
 derby.log
 metastore_db/
 spark-warehouse/

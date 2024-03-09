@@ -8,7 +8,7 @@ import org.apache.spark.sql.functions.{col, row_number, year}
 object transforms {
 
   def highestClosingPricesPerYear(df: DataFrame): DataFrame = {
-    // Se obtiene la sparkSession desde el DF !!
+    // SparkSession is implicit in the DF !!
     import df.sparkSession.implicits._
     val window = Window.partitionBy(year(col("Date")).as("year")).orderBy(col("Close").desc)
 
@@ -20,7 +20,7 @@ object transforms {
 
   }
 
-  // Definimos una función para probar en test
+  // Mock function for trial testing. We can delete it after.
   def add(x: Int, y: Int): Int = x + y
 
 }
