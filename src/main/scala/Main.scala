@@ -26,7 +26,7 @@ case class State(state: String, stateName: String)
 
 object Main extends Logging {
 
-  def flatProduct(t: Product): Iterator[Any] = t.productIterator.flatMap {
+  private def flatProduct(t: Product): Iterator[Any] = t.productIterator.flatMap {
     case p: Product => flatProduct(p)
     case x => Iterator(x)
   }
